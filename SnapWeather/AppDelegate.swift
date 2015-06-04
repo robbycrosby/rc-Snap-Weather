@@ -1,12 +1,14 @@
 //
 //  AppDelegate.swift
-//  SnapWeather
+//  Record Video With Swift
 //
-//  Created by Robert Crosby on 5/2/15.
-//  Copyright (c) 2015 Robert Crosby. All rights reserved.
+//  Created by Raj Bala on 9/22/14.
+//  Copyright (c) 2014 Raj Bala. All rights reserved.
 //
 
 import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("68ixjZGepAt7NPc5QyDlwUr9c3BKDNmUTNOuFGWH",
+            clientKey: "T4ZHDgVxHLZxm0RLsXrIydI5TiSeHagUxFRWLtgZ")
+        //PFUser.logOut()
         return true
     }
 
